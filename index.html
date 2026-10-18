@@ -4,603 +4,425 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#10152f">
+  <meta name="theme-color" content="#101027">
+  <meta name="description" content="S. Kumaisha - Information Technology student, aspiring product engineer and cybersecurity project builder.">
+  <title>S. Kumaisha | Digital Resume</title>
 
-  <title>S. Kumaisha | Aspiring Product Engineer</title>
-
-  <meta name="description"
-    content="Portfolio of S. Kumaisha, B.Tech Information Technology student at Nehru Institute of Technology, Coimbatore.">
-
-  <meta name="author" content="S. Kumaisha">
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <!-- External CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- Navigation -->
-  <header>
-    <div class="container navbar">
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
 
-      <a class="logo" href="#home" aria-label="Kumaisha home">
-        SK<span>.</span>
-      </a>
+  <header class="navbar">
+    <a href="#home" class="logo">K<span>.</span></a>
 
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#strengths">Strengths</a>
-        <a href="#career">Career</a>
-      </nav>
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
-    </div>
+    <nav id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact" class="nav-contact">Contact ↗</a>
+    </nav>
   </header>
 
   <main>
-
-    <!-- Hero Section -->
-    <section class="hero container" id="home">
-
+    <section class="hero section" id="home">
       <div class="hero-content">
-
-        <div class="eyebrow">
+        <div class="availability">
           <span class="status-dot"></span>
-          B.Tech IT Student · 2026
+          IT Student · Cybersecurity Enthusiast
         </div>
 
-        <h1>
-          S. Kumaisha<span class="gradient-text">.</span>
-        </h1>
+        <p class="eyebrow">HELLO, I'M</p>
+        <h1>S. Kumaisha<span class="gradient-text">.</span></h1>
 
-        <p class="role">
-          Aspiring Product Engineer
-        </p>
+        <h2>Building secure digital<br>
+          <span class="gradient-text">experiences.</span>
+        </h2>
 
         <p class="hero-description">
-          Curious mind. Creative problem solver. Future builder.
-          I am an Information Technology student passionate about
-          software development, practical projects and emerging
-          technologies.
+          B.Tech Information Technology student passionate about
+          cybersecurity, software development, AI-powered security
+          and building practical technology projects.
         </p>
 
-        <div class="hero-actions">
-
-          <a class="btn btn-primary" href="#projects">
-            Explore My Projects ↗
-          </a>
-
-          <button
-            class="btn btn-secondary"
-            type="button"
-            onclick="window.print()">
-            ↓ Download / Print Resume
-          </button>
-
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">Explore My Projects ↗</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
         </div>
 
-        <p class="hero-contact">
-          📍 Coimbatore, Tamil Nadu
-          &nbsp; · &nbsp;
-          ✉
-          <a href="mailto:kumaishakumaisha86@gmail.com">
-            kumaishakumaisha86@gmail.com
-          </a>
+        <div class="social-links">
+          <a href="https://github.com/Kumaisha-cyber"
+             target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <span>✦</span>
+          <a href="mailto:kumaishakumaisha86@gmail.com">Email ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+
+        <div class="profile-card">
+          <div class="profile-top">
+            <span class="window-dot"></span>
+            <span class="window-dot"></span>
+            <span class="window-dot"></span>
+            <span class="profile-label">MY DIGITAL IDENTITY</span>
+          </div>
+
+          <div class="profile-icon">K<span>.</span></div>
+          <h3>S. Kumaisha</h3>
+          <p>Information Technology</p>
+
+          <div class="profile-divider"></div>
+
+          <div class="profile-info">
+            <span>Focus</span>
+            <strong>Cybersecurity & AI</strong>
+          </div>
+          <div class="profile-info">
+            <span>Role</span>
+            <strong>Aspiring Product Engineer</strong>
+          </div>
+          <div class="profile-info">
+            <span>Projects</span>
+            <strong>11 Security Projects</strong>
+          </div>
+
+          <div class="code-decoration">&lt;/&gt; SECURE BY DESIGN</div>
+        </div>
+
+        <div class="floating-tag tag-top">🛡️ Security</div>
+        <div class="floating-tag tag-bottom">✦ Innovation</div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">GET TO KNOW ME</p>
+        <h2>About <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="about-card">
+        <div class="about-symbol">✳</div>
+        <div>
+          <h3>Curious mind. Security-first thinking.</h3>
+          <p>
+            I'm an Information Technology student who enjoys turning
+            ideas into working applications. My projects explore
+            password security, authentication, malware detection,
+            network scanning, security monitoring and AI-assisted
+            threat detection. I aim to keep learning, build useful
+            solutions and grow into a skilled software professional.
+          </p>
+          <div class="about-tags">
+            <span>Problem Solving</span>
+            <span>Cybersecurity</span>
+            <span>Web Development</span>
+            <span>Continuous Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">WHAT I WORK WITH</p>
+        <h2>Skills & <span class="gradient-text">Technologies</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <div class="skill-icon">⌘</div>
+          <h3>Programming</h3>
+          <p>Python · Java · JavaScript · C · C++</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-icon">◈</div>
+          <h3>Web Development</h3>
+          <p>HTML · CSS · JavaScript · Responsive UI</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-icon">⛨</div>
+          <h3>Cybersecurity</h3>
+          <p>Authentication · Hashing · Network Security · Threat Detection</p>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-icon">⌬</div>
+          <h3>Tools & Platforms</h3>
+          <p>Git · GitHub · VS Code · Render · GitHub Pages</p>
+        </article>
+      </div>
+      <p class="small-note">
+        Keep only the languages, technologies and tools you have actually used.
+      </p>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">MY WORK & EXPERIMENTS</p>
+        <h2>Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-description">
+          Practical projects exploring digital security, monitoring and detection.
         </p>
-
       </div>
 
-      <!-- Decorative Profile Design -->
-      <div class="visual" aria-label="SK monogram">
-
-        <div class="orbit">
-          <div class="monogram">SK.</div>
+      <div class="project-toolbar">
+        <div class="filter-buttons" id="filterButtons">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="security">Security Tools</button>
+          <button class="filter-btn" data-filter="monitoring">Monitoring</button>
+          <button class="filter-btn" data-filter="ai">AI & Detection</button>
         </div>
 
-        <div class="floating-card floating-one">
-          ✦ Always Learning
-        </div>
-
-        <div class="floating-card floating-two">
-          💻 Building with Code
-        </div>
-
+        <label class="search-box">
+          <span>⌕</span>
+          <input type="search" id="projectSearch"
+            placeholder="Search projects..." aria-label="Search projects">
+        </label>
       </div>
 
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-
-      <div class="container">
-
-        <div class="section-heading">
-          <p class="section-label">Get to know me</p>
-
-          <h2>
-            A little about
-            <span class="gradient-text">my journey</span>
-          </h2>
-
-          <p>
-            Learning today, building tomorrow.
-          </p>
-        </div>
-
-        <div class="about-grid">
-
-          <article class="panel">
-
-            <h3>Professional Profile</h3>
-
-            <p>
-              I am a motivated and enthusiastic first-year
-              B.Tech Information Technology student at
-              <span class="highlight">
-                Nehru Institute of Technology, Coimbatore.
-              </span>
-              I have a foundation in C, Python, Java, HTML,
-              CSS and JavaScript.
-            </p>
-
-            <br>
-
-            <p>
-              I enjoy learning new technologies, solving
-              problems and developing practical projects.
-              I am a quick learner, responsible and adaptable,
-              with a strong willingness to take initiative
-              and improve my skills.
-            </p>
-
-          </article>
-
-          <article class="panel">
-
-            <h3>What I Am Interested In</h3>
-
-            <p>
-              I am interested in software engineering,
-              emerging technologies, creative problem-solving
-              and developing useful technology solutions
-              for real-world needs.
-            </p>
-
-            <div class="mini-tags">
-              <span>Software Development</span>
-              <span>Problem Solving</span>
-              <span>Cybersecurity</span>
-              <span>Innovation</span>
-              <span>Continuous Learning</span>
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-
-      <div class="container">
-
-        <div class="section-heading">
-          <p class="section-label">My academic journey</p>
-
-          <h2>
-            Education &
-            <span class="gradient-text">Growth</span>
-          </h2>
-
-          <p>
-            Building a strong foundation for my technology career.
-          </p>
-        </div>
-
-        <div class="panel">
-
-          <article class="education-card">
-
-            <div class="edu-icon" aria-hidden="true">
-              🎓
-            </div>
-
-            <div>
-
-              <span class="year">2026 – Present</span>
-
-              <h3>B.Tech – Information Technology</h3>
-
-              <p>
-                Nehru Institute of Technology, Coimbatore
-              </p>
-
-              <p>
-                Developing knowledge in programming,
-                computing fundamentals and software technologies.
-              </p>
-
-            </div>
-
-          </article>
-
-          <div class="education-divider"></div>
-
-          <article class="education-card">
-
-            <div class="edu-icon" aria-hidden="true">
-              📚
-            </div>
-
-            <div>
-
-              <h3>Higher Secondary Education</h3>
-
-              <p>
-                Don Bosco Matric Hr. Sec. School, Paramakudi
-              </p>
-
-              <p>
-                Completed higher secondary schooling.
-              </p>
-
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- Technical Skills Section -->
-    <section id="skills">
-
-      <div class="container">
-
-        <div class="section-heading">
-          <p class="section-label">My technical toolkit</p>
-
-          <h2>
-            Skills &
-            <span class="gradient-text">Technologies</span>
-          </h2>
-
-          <p>
-            Core programming and development skills
-            that I am learning and strengthening.
-          </p>
-        </div>
-
-        <div class="skills-grid">
-
-          <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">🔵</div>
-            <h3>C Programming</h3>
-            <p>Programming fundamentals</p>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">🐍</div>
-            <h3>Python</h3>
-            <p>Programming and logic</p>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">☕</div>
-            <h3>Java</h3>
-            <p>Object-oriented basics</p>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">🌐</div>
-            <h3>HTML</h3>
-            <p>Web page structure</p>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">🎨</div>
-            <h3>CSS</h3>
-            <p>Web styling and layouts</p>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">⚡</div>
-            <h3>JavaScript</h3>
-            <p>Interactive web basics</p>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">🐙</div>
-            <h3>GitHub</h3>
-            <p>Code and repositories</p>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon" aria-hidden="true">🧩</div>
-            <h3>Problem Solving</h3>
-            <p>Logical thinking</p>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-
-      <div class="container">
-
-        <div class="section-heading">
-          <p class="section-label">Things I have worked on</p>
-
-          <h2>
-            Featured
-            <span class="gradient-text">Projects</span>
-          </h2>
-
-          <p>
-            Projects that help me practise my skills
-            and explore practical technology solutions.
-          </p>
-        </div>
-
-        <div class="projects-grid">
-
-          <!-- Project 1 -->
-          <article class="project-card">
-
-            <div class="project-top">
-
-              <div class="project-icon purple-bg"
-                   aria-hidden="true">
-                🔐
-              </div>
-
-              <span class="project-number">
-                PROJECT 01
-              </span>
-
-            </div>
-
-            <h3>Password Generator</h3>
-
-            <p>
-              Developed a password generator that creates
-              randomized passwords to help users create
-              stronger credentials.
-            </p>
-
-            <div class="project-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </div>
-
-          </article>
-
-          <!-- Project 2 -->
-          <article class="project-card">
-
-            <div class="project-top">
-
-              <div class="project-icon teal-bg"
-                   aria-hidden="true">
-                🛡️
-              </div>
-
-              <span class="project-number">
-                PROJECT 02
-              </span>
-
-            </div>
-
-            <h3>Password Strength Analyzer</h3>
-
-            <p>
-              Evaluates password characteristics such as
-              length, uppercase and lowercase letters,
-              numbers and special characters to provide
-              strength feedback.
-            </p>
-
-            <div class="project-tags">
-              <span>Security</span>
-              <span>Logic</span>
-              <span>Web Development</span>
-            </div>
-
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project-card">
-
-            <div class="project-top">
-
-              <div class="project-icon blue-bg"
-                   aria-hidden="true">
-                🚨
-              </div>
-
-              <span class="project-number">
-                PROJECT 03
-              </span>
-
-            </div>
-
-            <h3>Campus Emergency Hub</h3>
-
-            <p>
-              An IT-based project concept designed to help
-              students quickly find emergency contacts
-              and campus support services.
-            </p>
-
-            <div class="project-tags">
-              <span>Problem Solving</span>
-              <span>Student Support</span>
-              <span>Web Concept</span>
-            </div>
-
-          </article>
-
-        </div>
-
-        <p style="text-align:center; color:var(--muted); margin-top:25px;">
-          More projects and technical experiments will be added as I grow.
-        </p>
-
-      </div>
-
-    </section>
-
-    <!-- Strengths Section -->
-    <section id="strengths">
-
-      <div class="container">
-
-        <div class="section-heading">
-          <p class="section-label">Beyond technical skills</p>
-
-          <h2>
-            My
-            <span class="gradient-text">Strengths</span>
-          </h2>
-
-          <p>
-            The qualities I bring to learning, teamwork
-            and problem-solving.
-          </p>
-        </div>
-
-        <div class="strengths">
-
-          <div class="strength">
-            <span>✦</span>Quick Learner
+      <div class="projects-grid" id="projectsGrid">
+
+        <article class="project-card" data-category="security">
+          <div class="project-top">
+            <div class="project-icon purple">⌘</div>
+            <span class="project-number">01 / 11</span>
           </div>
-
-          <div class="strength">
-            <span>✦</span>Problem-Solving Ability
+          <span class="project-type">SECURITY TOOL</span>
+          <h3>Password Generator</h3>
+          <p>Generates passwords based on user-selected criteria to support stronger account security.</p>
+          <div class="tech-tags"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Kumaisha-cyber" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://kumaisha-cyber.github.io/password-generator/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
           </div>
+        </article>
 
-          <div class="strength">
-            <span>✦</span>Leadership
+        <article class="project-card" data-category="security">
+          <div class="project-top">
+            <div class="project-icon pink">◉</div>
+            <span class="project-number">02 / 11</span>
           </div>
-
-          <div class="strength">
-            <span>✦</span>Teamwork
+          <span class="project-type">PASSWORD SECURITY</span>
+          <h3>Password Strength Analyzer</h3>
+          <p>Evaluates password characteristics and provides feedback to help users create stronger passwords.</p>
+          <div class="tech-tags"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Kumaisha-cyber" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="#contact" class="demo-placeholder">Add Demo ↗</a>
           </div>
+        </article>
 
-          <div class="strength">
-            <span>✦</span>Adaptability
+        <article class="project-card" data-category="ai">
+          <div class="project-top">
+            <div class="project-icon blue">✳</div>
+            <span class="project-number">03 / 11</span>
           </div>
-
-          <div class="strength">
-            <span>✦</span>Positive Attitude
+          <span class="project-type">AI SECURITY</span>
+          <h3>AI Threat Detection</h3>
+          <p>Explores threat identification and security-event analysis through an AI-assisted detection interface.</p>
+          <div class="tech-tags"><span>Python</span><span>AI/ML</span><span>Security</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Kumaisha-cyber" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="#contact" class="demo-placeholder">Add Demo ↗</a>
           </div>
+        </article>
 
-        </div>
+        <article class="project-card" data-category="security">
+          <div class="project-top">
+            <div class="project-icon green">♙</div>
+            <span class="project-number">04 / 11</span>
+          </div>
+          <span class="project-type">AUTHENTICATION</span>
+          <h3>Secure Login with 2FA</h3>
+          <p>Demonstrates a login workflow with an additional two-factor authentication step.</p>
+          <div class="tech-tags"><span>Python</span><span>Authentication</span><span>Web</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Kumaisha-cyber" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="#contact" class="demo-placeholder">Add Demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="security">
+          <div class="project-top">
+            <div class="project-icon orange">◈</div>
+            <span class="project-number">05 / 11</span>
+          </div>
+          <span class="project-type">FILE SECURITY</span>
+          <h3>File Integrity Checker</h3>
+          <p>Uses file hashes to help identify unexpected changes between file integrity checks.</p>
+          <div class="tech-tags"><span>Python</span><span>Hashing</span><span>File Security</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Kumaisha-cyber" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://file-integrity-checker.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="monitoring">
+          <div class="project-top">
+            <div class="project-icon blue">▥</div>
+            <span class="project-number">06 / 11</span>
+          </div>
+          <span class="project-type">SECURITY MONITORING</span>
+          <h3>SIEM Security Dashboard</h3>
+          <p>Displays security-event metrics and helps visualize critical alerts, suspicious IPs and failed logins.</p>
+          <div class="tech-tags"><span>Python</span><span>Dashboard</span><span>SIEM</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Kumaisha-cyber" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="#contact" class="demo-placeholder">Add Demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="security">
+          <div class="project-top">
+            <div class="project-icon pink">⌁</div>
+            <span class="project-number">07 / 11</span>
+          </div>
+          <span class="project-type">MALWARE ANALYSIS</span>
+          <h3>Malware Hash Scanner</h3>
+          <p>Checks file hash values against configured indicators to help flag known suspicious samples.</p>
+          <div class="tech-tags"><span>Python</span><span>Hashing</span><span>Malware Analysis</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Kumaisha-cyber" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="#contact" class="demo-placeholder">Add Demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="security">
+          <div class="project-top">
+            <div class="project-icon orange">↗</div>
+            <span class="project-number">08 / 11</span>
+          </div>
+          <span class="project-type">WEB SECURITY</span>
+          <h3>Phishing URL Detector</h3>
+          <p>Analyzes URL characteristics to help identify potentially suspicious or deceptive links.</p>
+          <div class="tech-tags"><span>Python</span><span>URL Analysis</span><span>Security</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Kumaisha-cyber" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="#contact" class="demo-placeholder">Add Demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="monitoring">
+          <div class="project-top">
+            <div class="project-icon purple">≋</div>
+            <span class="project-number">09 / 11</span>
+          </div>
+          <span class="project-type">LOG ANALYSIS</span>
+          <h3>Security Log Analyzer</h3>
+          <p>Processes security log entries and highlights patterns that may need further investigation.</p>
+          <div class="tech-tags"><span>Python</span><span>Log Analysis</span><span>Security</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Kumaisha-cyber" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="#contact" class="demo-placeholder">Add Demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="security">
+          <div class="project-top">
+            <div class="project-icon green">⌘</div>
+            <span class="project-number">10 / 11</span>
+          </div>
+          <span class="project-type">NETWORK SECURITY</span>
+          <h3>Network Port Scanner</h3>
+          <p>Checks selected ports on authorized targets to demonstrate basic network reconnaissance.</p>
+          <div class="tech-tags"><span>Python</span><span>Networking</span><span>TCP/IP</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Kumaisha-cyber" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://network-port-scanner.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="ai">
+          <div class="project-top">
+            <div class="project-icon blue">✧</div>
+            <span class="project-number">11 / 11</span>
+          </div>
+          <span class="project-type">INTRUSION DETECTION</span>
+          <h3>AI Intrusion Detector</h3>
+          <p>Explores intrusion-detection concepts by identifying potentially abnormal activity in available data.</p>
+          <div class="tech-tags"><span>Python</span><span>AI/ML</span><span>Network Security</span></div>
+          <div class="project-links">
+            <a href="https://github.com/Kumaisha-cyber" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://ai-intrusion-detection.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+          </div>
+        </article>
 
       </div>
 
+      <p id="noResults" class="no-results" hidden>No matching projects found.</p>
     </section>
 
-    <!-- Career Objective Section -->
-    <section id="career">
-
-      <div class="container">
-
-        <div class="career-banner">
-
-          <p class="section-label">
-            Where I want to go
-          </p>
-
-          <h2>
-            Creating technology that makes a difference.
-          </h2>
-
-          <p>
-            My career objective is to continuously develop
-            my technical and professional skills, gain practical
-            experience through real-world projects, and build
-            a successful career as a Product Engineer by
-            contributing to innovative and impactful technology
-            solutions.
-          </p>
-
-          <a
-            class="btn btn-primary"
-            href="mailto:kumaishakumaisha86@gmail.com">
-            Say Hello ✉
-          </a>
-
-          <a
-            class="btn btn-secondary"
-            href="https://github.com/Kumaisha-cyber"
-            target="_blank"
-            rel="noopener noreferrer">
-            Explore My GitHub ↗
-          </a>
-
-        </div>
-
+    <section class="section" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">MY ACADEMIC JOURNEY</p>
+        <h2>Education & <span class="gradient-text">Growth</span></h2>
       </div>
 
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">CURRENT</span>
+            <h3>B.Tech Information Technology</h3>
+            <p>Nehru Institute of Technology, Coimbatore</p>
+            <p class="muted">Learning programming, computer science fundamentals and practical IT skills.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">CONTINUOUS LEARNING</span>
+            <h3>Online Learning & Certifications</h3>
+            <p>freeCodeCamp and independent project-based learning</p>
+            <p class="muted">Add only certifications you have officially earned.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <section class="section contact-section" id="contact">
+      <div class="contact-card">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2>Have an opportunity<br>or an idea?</h2>
+        <p>I'm interested in learning, collaborating and building useful technology.</p>
+
+        <a class="btn btn-primary"
+          href="mailto:kumaishakumaisha86@gmail.com?subject=Opportunity%20for%20Kumaisha">
+          Say Hello ↗
+        </a>
+
+        <div class="contact-details">
+          <a href="mailto:kumaishakumaisha86@gmail.com">kumaishakumaisha86@gmail.com</a>
+          <a href="https://github.com/Kumaisha-cyber"
+             target="_blank" rel="noopener noreferrer">github.com/Kumaisha-cyber ↗</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-
-    <div class="container footer-inner">
-
-      <p>
-        © 2026 S. Kumaisha · Digital Portfolio
-      </p>
-
-      <div class="footer-links">
-
-        <a href="mailto:kumaishakumaisha86@gmail.com">
-          Email
-        </a>
-
-        <a
-          href="https://github.com/Kumaisha-cyber"
-          target="_blank"
-          rel="noopener noreferrer">
-          GitHub ↗
-        </a>
-
-        <a href="#home">
-          Back to top ↑
-        </a>
-
-      </div>
-
-    </div>
-
+    <a href="#home" class="logo">K<span>.</span></a>
+    <p>Designed with purpose by S. Kumaisha</p>
+    <p>© <span id="year"></span> · Keep learning. Keep building.</p>
   </footer>
 
-  <!-- External JavaScript -->
-  <script src="script.js"></script>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
+  <script src="script.js"></script>
 </body>
 </html>
