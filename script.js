@@ -1,116 +1,101 @@
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Reveal sections and cards as they enter the screen
-  const revealElements = document.querySelectorAll(
-    ".section-heading, .panel, .education-card, " +
-    ".skill-card, .project-card, .strength, .career-banner"
-  );
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const projectSearch = document.getElementById("projectSearch");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+const noResults = document.getElementById("noResults");
+const backToTop = document.getElementById("backToTop");
 
-  revealElements.forEach((element) => {
-    element.classList.add("reveal");
+let activeFilter = "all";
+
+// Mobile navigation
+menuToggle.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("open");
+
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
   });
+});
 
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      (entries, currentObserver) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            currentObserver.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.12
-      }
-    );
-
-    revealElements.forEach((element) => {
-      observer.observe(element);
+// Filter buttons
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    filterButtons.forEach((item) => {
+      item.classList.remove("active");
     });
-  } else {
-    revealElements.forEach((element) => {
-      element.classList.add("visible");
-    });
-  }
 
-  // Highlight the navigation link for the current section
-  const navLinks = document.querySelectorAll('nav a[href^="#"]');
-  const sections = document.querySelectorAll(
-    "main section[id], main div.hero[id]"
-  );
+    button.classList.add("active");
+    activeFilter = button.dataset.filter;
 
-  if ("IntersectionObserver" in window) {
-    const sectionObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
+    filterProjects();
+  });
+});
 
-          navLinks.forEach((link) => {
-            const isCurrent =
-              link.getAttribute("href") === "#" + entry.target.id;
+// Search and filter
+function filterProjects() {
+  const searchTerm = projectSearch.value.trim().toLowerCase();
+  let visibleCount = 0;
 
-            link.classList.toggle("active", isCurrent);
-          });
-        });
-      },
-      {
-        rootMargin: "-25% 0px -60% 0px"
-      }
-    );
+  projectCards.forEach((card) => {
+    const category = card.dataset.category;
+    const content = card.textContent.toLowerCase();
 
-    sections.forEach((section) => {
-      sectionObserver.observe(section);
-    });
-  }
+    const matchesCategory =
+      activeFilter === "all" || category === activeFilter;
 
-  // Create a dark mode toggle if it is not already present
-  let themeButton = document.getElementById("theme-toggle");
+    const matchesSearch = content.includes(searchTerm);
+    const shouldShow = matchesCategory && matchesSearch;
 
-  if (!themeButton) {
-    themeButton = document.createElement("button");
-    themeButton.id = "theme-toggle";
-    themeButton.type = "button";
-    themeButton.className = "btn btn-secondary";
-    themeButton.setAttribute("aria-label", "Toggle dark mode");
-    themeButton.style.position = "fixed";
-    themeButton.style.right = "18px";
-    themeButton.style.bottom = "18px";
-    themeButton.style.zIndex = "200";
-    document.body.appendChild(themeButton);
-  }
+    card.hidden = !shouldShow;
 
-  // Remember theme choice during this browser session
-  let darkMode = false;
-
-  try {
-    darkMode = localStorage.getItem("kumaisha-theme") === "dark";
-  } catch (error) {
-    darkMode = false;
-  }
-
-  function applyTheme() {
-    document.body.classList.toggle("dark-mode", darkMode);
-    themeButton.textContent = darkMode ? "☀️ Light mode" : "🌙 Dark mode";
-    themeButton.setAttribute(
-      "aria-pressed",
-      String(darkMode)
-    );
-  }
-
-  applyTheme();
-
-  themeButton.addEventListener("click", () => {
-    darkMode = !darkMode;
-    applyTheme();
-
-    try {
-      localStorage.setItem(
-        "kumaisha-theme",
-        darkMode ? "dark" : "light"
-      );
-    } catch (error) {
-      // Theme still works if browser storage is unavailable.
+    if (shouldShow) {
+      visibleCount++;
     }
   });
+
+  noResults.hidden = visibleCount !== 0;
+}
+
+projectSearch.addEventListener("input", filterProjects);
+
+// Back to top
+window.addEventListener("scroll", () => {
+  backToTop.classList.toggle("visible", window.scrollY > 400);
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+// Automatic current year
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+// Reveal projects as they enter the viewport
+const revealObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = "running";
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.08 }
+);
+
+projectCards.forEach((card) => {
+  card.style.animationPlayState = "paused";
+  revealObserver.observe(card);
 });
